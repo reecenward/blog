@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3002/add-name', {
+      const response = await fetch('https://blogbackend-production-023e.up.railway.app//add-name', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function App() {
   // Function to handle name update
   const handleUpdate = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3002/update-name/${id}`, {
+      const response = await fetch(`https://blogbackend-production-023e.up.railway.app//update-name/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ function App() {
   // Function to handle name deletion
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3002/delete-name/${id}`, {
+      const response = await fetch(`https://blogbackend-production-023e.up.railway.app//delete-name/${id}`, {
         method: 'DELETE',
       });
 
