@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_ENDPOINT from './utils/api';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://blogbackend-production-023e.up.railway.app/login', {
+      const response = await fetch(`${API_ENDPOINT}/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {

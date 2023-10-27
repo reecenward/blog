@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+import API_ENDPOINT from './utils/api';
 
 function ImageUpload() {
+
+  
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
   const [imageData, setImageData] = useState([]);
@@ -16,12 +20,18 @@ function ImageUpload() {
     }
 
     try {
+      const jwtToken = Cookies.get('jwt-token');
+      console.log('JWT Token:', jwtToken);
       const formData = new FormData();
       formData.append('image', selectedFile);
 
-      const response = await fetch('https://blogbackend-production-023e.up.railway.app/image', {
+      const response = await fetch(`${API_ENDPOINT}/image`, {
         method: 'POST',
         body: formData,
+        credentials: 'include',
+        headers: {
+            'Authorization': `Bearer ${jwtToken}`
+        },
       });
 
       if (response.ok) {
@@ -38,8 +48,14 @@ function ImageUpload() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://blogbackend-production-023e.up.railway.app/image/${id}`, {
+      const jwtToken = Cookies.get('jwt-token');
+      console.log('JWT Token:', jwtToken);
+      const response = await fetch(`${API_ENDPOINT}/image/${id}`, {
         method: 'DELETE',
+        credentials: 'include',
+        headers: {
+            'Authorization': `Bearer ${jwtToken}`
+        },
       });
 
       if (response.ok) {
@@ -56,7 +72,7 @@ function ImageUpload() {
 
   const fetchImageData = async () => {
     try {
-      const response = await fetch('https://blogbackend-production-023e.up.railway.app/image');
+      const response = await fetch(`${API_ENDPOINT}/image`);
       if (response.ok) {
         const data = await response.json();
         setImageData(data);
