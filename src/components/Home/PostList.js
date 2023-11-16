@@ -1,6 +1,6 @@
 import React from 'react';
 import PostItem from './PostItem';
-import LoadingSpinner from './LoadingSpinner';
+import '../../styles/PostItem.css'; 
 
 function PostList({ posts }) {
   return (

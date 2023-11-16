@@ -1,30 +1,4 @@
-// import { useEffect, useState } from 'react';
-// import API_ENDPOINT from '../utils/api';
 
-// function useFetchPost(title) {
-//   const [post, setPost] = useState(null);
-
-//   useEffect(() => {
-//     const fetchPost = async () => {
-//       try {
-//         const response = await fetch(`${API_ENDPOINT}/post/${title}`);
-//         if (!response.ok) {
-//           throw new Error('Failed to fetch post');
-//         }
-//         const data = await response.json();
-//         setPost(data.post);
-//       } catch (error) {
-//         console.error('Error fetching post:', error);
-//       }
-//     };
-
-//     fetchPost();
-//   }, [title]);
-
-//   return post;
-// }
-
-// export default useFetchPost;
 import { useEffect, useState } from 'react';
 import API_ENDPOINT from '../utils/api';
 

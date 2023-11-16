@@ -1,3 +1,3 @@
-const API_ENDPOINT = "https://blogbackend-production-023e.up.railway.app"
+const API_ENDPOINT = "http://localhost:3001"
   
 module.exports = API_ENDPOINT;

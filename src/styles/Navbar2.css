@@ -1,0 +1,58 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+.thing{
+  display: flex;
+}
+
+.navbar2 {
+  padding: 40px 0;
+  display: flex;
+  justify-content:center;
+}
+.nav-list2 {
+  width: 900px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  
+  .nav-item2 {
+    margin: 0;
+    padding: 0;
+  }
+  .ctalink{
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .nav-link2 {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-right: 20px;
+    font-family: 'Lexend', sans-serif;
+  } 
+  .cta {
+    background-color: white;
+    padding:10px 50px 10px 50px;
+    border-radius: 5px;
+    border: solid 3px;
+    transition: box-shadow .5s;
+    box-shadow: 0 6px 0 #000000;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+  }
+
+  .cta:hover{
+    box-shadow: none;
+  }
+
+  .nav-link2:hover {
+    text-decoration: underline;
+  }
+  
