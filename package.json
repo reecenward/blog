@@ -30,8 +30,6 @@
     "cookie-utils": "^1.0.0",
     "formik": "^2.4.5",
     "js-cookie": "^3.0.5",
-    "lexical": "^0.12.2",
-    "novel": "^0.1.22",
     "quill": "^1.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -39,7 +37,6 @@
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
-    "typescript": "^5.2.2",
     "universal-cookie": "^6.1.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.3.2"
